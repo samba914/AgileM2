@@ -60,7 +60,6 @@ public class Ingredient
         return "Ingrédient : " + nom + ", Catégorie : " + categorie + ", kilocalories : " + kilocalories;
     }
 
-
     public int calculerKilocalories(int quantite) {
         return quantite * kilocalories;
     }
