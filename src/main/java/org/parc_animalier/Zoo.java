@@ -4,6 +4,12 @@ package org.parc_animalier;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Cette classe recette permet de manipuler un objet recette.
+ *
+ * @author (Alassaf Mohamed & Diouf Samba)
+ * @version (22 / 05 / 2023)
+ */
 public class Zoo
 {
     private List<Animal> animaux;

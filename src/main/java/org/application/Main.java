@@ -1,4 +1,4 @@
-package org.parc_animalier;
+package org.application;
 
 public class Main {
     public static void main(String[] args) {
