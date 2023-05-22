@@ -23,8 +23,6 @@ public class Recette {
         nom = "";
         tempsCuisson = 0;
         listeIngredients = new ArrayList<>();
-
-
     }
 
     public Recette(String nom, int tempsCuisson) {
@@ -95,7 +93,7 @@ public class Recette {
     private static int calculerKilocaloriesPourIngredient(Ingredient ingredient) {
         return ingredient.calculerKilocalories(1); // Utilisation d'une quantité unitaire pour chaque ingrédient`
     }
-    
+
     public boolean verifierIngredientPresent(String nomIngredient) {
         for (Ingredient ingredient : this.listeIngredients) {
             if (ingredient.getNom().equals(nomIngredient)) {
