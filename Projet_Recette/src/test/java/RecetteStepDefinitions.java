@@ -32,7 +32,7 @@ public class RecetteStepDefinitions {
     }
 
     @Given("une nouvelle recette {string} avec un ingrédient de {int} kilocalories")
-    public void uneNouvelleRecetteAvecUnIngredientDeKilocalories(String nomRecette, int kilocalories) {
+    public void nouvelleRecetteAvecPoulet(String nomRecette, int kilocalories) {
         this.recette = new Recette(nomRecette, 0);
         Ingredient ingredient = new Ingredient("Poulet","Viande", kilocalories);
         this.recette.ajouterIngredient(ingredient);
