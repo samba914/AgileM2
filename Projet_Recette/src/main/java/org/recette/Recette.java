@@ -89,9 +89,13 @@ public class Recette
     public int calculerKilocalories() {
         int totalKilocalories = 0;
         for (Ingredient ingredient : listeIngredients) {
-            totalKilocalories += ingredient.calculerKilocalories(1); // Utilisation d'une quantité unitaire pour chaque ingrédient
+            totalKilocalories += calculerKilocaloriesPourIngredient( ingredient);
         }
         return totalKilocalories;
+    }
+
+    private static int calculerKilocaloriesPourIngredient( Ingredient ingredient) {
+        return ingredient.calculerKilocalories(1); // Utilisation d'une quantité unitaire pour chaque ingrédient`
     }
 
 

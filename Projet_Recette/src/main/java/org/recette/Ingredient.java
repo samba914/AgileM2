@@ -61,8 +61,6 @@ public class Ingredient
     }
 
 
-
-
     public int calculerKilocalories(int quantite) {
         return quantite * kilocalories;
     }
