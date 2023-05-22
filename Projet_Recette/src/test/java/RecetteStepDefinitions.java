@@ -1,3 +1,11 @@
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.recette.Ingredient;
+import org.recette.Recette;
+
+import static org.junit.Assert.assertEquals;
+
 public class RecetteStepDefinitions {
     private Recette recette;
     private Ingredient ingredient;
@@ -14,7 +22,7 @@ public class RecetteStepDefinitions {
 
     @When("on ajoute un nouvel ingrédient à la recette")
     public void onAjouteUnNouvelIngredientALaRecette() {
-        ingredient = new Ingredient("Ingredient", 200);
+        ingredient = new Ingredient("Poulet", "Viande", 200);
         this.recette.ajouterIngredient(ingredient);
     }
 
@@ -26,7 +34,7 @@ public class RecetteStepDefinitions {
     @Given("une nouvelle recette {string} avec un ingrédient de {int} kilocalories")
     public void uneNouvelleRecetteAvecUnIngredientDeKilocalories(String nomRecette, int kilocalories) {
         this.recette = new Recette(nomRecette, 0);
-        Ingredient ingredient = new Ingredient("Ingredient", kilocalories);
+        Ingredient ingredient = new Ingredient("Poulet","Viande", kilocalories);
         this.recette.ajouterIngredient(ingredient);
     }
 
