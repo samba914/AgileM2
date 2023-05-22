@@ -1,5 +1,6 @@
 package org.parc_animalier;
 
+import org.designstrategy.StrategieManger;
 import org.recette.Recette;
 
 /**
@@ -12,6 +13,7 @@ public class Animal
 {
     private double poids;
     private String race;
+    private StrategieManger strategieManger;
 
     public Animal()
     {
@@ -31,15 +33,19 @@ public class Animal
     public void setRace(String race){
         this.race = race;
     }
+    public StrategieManger getStrategieManger() {
+        return this.strategieManger;
+    }
+    public void setStrategieManger(StrategieManger strategieManger) {
+        this.strategieManger = strategieManger;
+    }
 
     public void mangerNourriture(){
         this.poids += 1;
     }
 
-    public void mangerNourriture(Recette recette){
-        int calories = recette.calculerKilocalories();
-        //chaque 1000 kilocalories mangé l'animal grossit de 0.1 kg
-        this.poids += (calories*0.1)/1000;
+    public void mangerNourriture(Recette recette) {
+        this.strategieManger.manger(this, recette);
     }
 
 
