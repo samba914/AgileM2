@@ -8,6 +8,25 @@ public class Ingredient
     private String categorie;
     private int kilocalories;
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public void setKilocalories(int kilocalories) {
+        this.kilocalories = kilocalories;
+    }
 
     /**
      * Constructeur d'objets de classe Ingredient

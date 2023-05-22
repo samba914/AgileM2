@@ -95,5 +95,11 @@ public class Recette
     }
 
 
+    public List<Ingredient> getListeIngredients() {
+        return listeIngredients;
+    }
 
+    public void setListeIngredients(List<Ingredient> listeIngredients) {
+        this.listeIngredients = listeIngredients;
+    }
 }
