@@ -6,7 +6,7 @@ import org.recette.Recette;
 public class StrategieHerbivoreManger implements StrategieManger {
     @Override
     public void manger(Animal animal, Recette recette) {
-        if (recette.verifierIngredientPresent("Viande")) {
+        if (recette.verifierIngredientPresent("viande")) {
             // Si la recette contient de la viande, cela a un impact négatif sur l'herbivore
             animal.setPoids(animal.getPoids() - 0.1);
         } else {

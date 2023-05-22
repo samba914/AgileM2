@@ -1,10 +1,12 @@
+package recette;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Classe-test RecetteTest.
+ * Classe-test recette.RecetteTest.
  *
  * @author  (votre nom)
  * @version (un numéro de version ou une date)
@@ -42,7 +44,7 @@ public class RecetteTest
     private Recette recette;
 
     /**
-     * Constructeur de la classe-test RecetteTest
+     * Constructeur de la classe-test recette.RecetteTest
      */
     public RecetteTest()
     {

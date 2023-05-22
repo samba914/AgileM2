@@ -6,7 +6,7 @@ import org.recette.Recette;
 public class StrategieMangerCarnivore implements StrategieManger {
     @Override
     public void manger(Animal animal, Recette recette) {
-        if (!recette.verifierIngredientPresent("Viande")) {
+        if (!recette.verifierIngredientPresent("viande")) {
             // Si la recette ne contient pas de viande, le carnivore  il mange moins bien et son poid augmente peu
             animal.setPoids(animal.getPoids() + (recette.calculerKilocalories() * 0.2)/1000);
         } else {

@@ -1,3 +1,5 @@
+package parc_animalier;
+
 import org.junit.Test;
 import org.parc_animalier.Animal;
 import org.parc_animalier.Zoo;
