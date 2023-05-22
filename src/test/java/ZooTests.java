@@ -21,6 +21,6 @@ public class ZooTests {
         Animal lion = new Animal();
         lion.setRace("Lion");
         zoo.ajouterUnanimal(lion);
-        assertFalse(zoo.estCeQueLaRaceEstDansLeZoo("Lion"));
+        assertFalse(zoo.estCeQueLaRaceEstDansLeZoo("Tigre"));
     }
 }
