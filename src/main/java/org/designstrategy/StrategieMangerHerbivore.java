@@ -3,7 +3,7 @@ package org.designstrategy;
 import org.parc_animalier.Animal;
 import org.recette.Recette;
 
-public class StrategieHerbivoreManger implements StrategieManger {
+public class StrategieMangerHerbivore implements StrategieManger {
     @Override
     public void manger(Animal animal, Recette recette) {
         if (recette.verifierIngredientPresent("viande")) {

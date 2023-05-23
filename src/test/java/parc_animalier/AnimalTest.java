@@ -1,6 +1,6 @@
 package parc_animalier;
 
-import org.designstrategy.StrategieHerbivoreManger;
+import org.designstrategy.StrategieMangerHerbivore;
 import org.designstrategy.StrategieManger;
 import org.designstrategy.StrategieMangerCarnivore;
 import org.junit.jupiter.api.BeforeEach;
@@ -49,8 +49,8 @@ class AnimalTest {
 
     @Test
     void setStrategieManger() {
-        minouche.setStrategieManger(new StrategieHerbivoreManger());
-        assertEquals(minouche.getStrategieManger().getClass(),StrategieHerbivoreManger.class);
+        minouche.setStrategieManger(new StrategieMangerHerbivore());
+        assertEquals(minouche.getStrategieManger().getClass(), StrategieMangerHerbivore.class);
 
     }
 

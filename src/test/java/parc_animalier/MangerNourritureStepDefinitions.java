@@ -4,12 +4,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.designfactory.IngredientFactory;
-import org.designstrategy.StrategieHerbivoreManger;
+import org.designstrategy.StrategieMangerHerbivore;
 import org.designstrategy.StrategieMangerCarnivore;
 import org.designstrategy.StrategieMangerOmnivore;
 import org.parc_animalier.Animal;
 import org.parc_animalier.Zoo;
-import org.recette.Ingredient;
 import org.recette.Recette;
 
 import static org.junit.Assert.*;
@@ -34,7 +33,7 @@ public class MangerNourritureStepDefinitions {
                 animal = new Animal();
                 animal.setRace("Mouton");
                 animal.setPoids(70);
-                animal.setStrategieManger(new StrategieHerbivoreManger());
+                animal.setStrategieManger(new StrategieMangerHerbivore());
                 break;
             case "carnivore":
                 animal = new Animal();

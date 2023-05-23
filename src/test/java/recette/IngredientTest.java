@@ -20,37 +20,34 @@ class IngredientTest {
 
     @Test
     void setNom() {
+        ingredient.setNom("poisson");
+        assertEquals("poisson",ingredient.getNom());
     }
 
     @Test
     void getCategorie() {
+        assertEquals("catégorie de viande",ingredient.getCategorie());
     }
 
     @Test
     void setCategorie() {
+        ingredient.setCategorie("legume wtf");
+        assertEquals("legume wtf",ingredient.getCategorie());
     }
-
     @Test
     void setKilocalories() {
-    }
-
-    @Test
-    void afficher() {
+        ingredient.setKilocalories(2500);
+        assertEquals(2500,ingredient.getKilocalories());
     }
 
     @Test
     void getKilocalories() {
-    }
-
-    @Test
-    void testToString() {
+        assertEquals(1500,ingredient.getKilocalories());
     }
 
     @Test
     void calculerKilocalories() {
+        assertEquals(2*ingredient.getKilocalories(),ingredient.calculerKilocalories(2));
     }
 
-    @Test
-    void testEquals() {
-    }
 }

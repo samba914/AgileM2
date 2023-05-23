@@ -54,11 +54,7 @@ public class Ingredient
         this.kilocalories = kilocalories ;
     }
 
-    public void afficher() {
-        System.out.println("Ingrédient : " + nom);
-        System.out.println("Catégorie : " + categorie);
-        System.out.println("kilocalories : " + kilocalories);
-    }
+
     public int getKilocalories() {
         return kilocalories;
     }
