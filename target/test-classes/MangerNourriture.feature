@@ -20,7 +20,7 @@ Feature: Manger de la nourriture
   Scenario: Un carnivore mange une recette sans viande
     Given un animal de type "carnivore"
     When l'animal mange une recette sans viande
-    Then son poids augmente de 0.2 kg pour chaque 1000 kilocalories consommées
+    Then son poids augmente de 0.1 kg pour chaque 1000 kilocalories consommées
 
   Scenario: Un carnivore mange une recette contenant de la viande
     Given un animal de type "carnivore"

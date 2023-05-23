@@ -1,5 +1,7 @@
 package org.recette;
 
+import java.util.Objects;
+
 /**
  * Cette classe recette permet de manipuler un objet recette.
  *
@@ -67,6 +69,15 @@ public class Ingredient
 
     public int calculerKilocalories(int quantite) {
         return quantite * kilocalories;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return kilocalories == that.kilocalories && Objects.equals(nom, that.nom) && Objects.equals(categorie, that.categorie);
     }
 
 }
