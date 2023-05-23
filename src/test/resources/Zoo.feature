@@ -1,5 +1,8 @@
 Feature: Zoo
-
+  En tant que gestionnaire du zoo,
+  Je veux pouvoir nourrir les animaux, ajouter de nouveaux animaux et gérer la capacité du zoo,
+  Afin de maintenir un environnement sain et équilibré pour les animaux.
+  
   Scenario: Nourrir un seul animal
     Given un zoo avec un animal de 5 kg
     When on nourrit les animaux

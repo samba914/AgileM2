@@ -1,4 +1,8 @@
 Feature: Recette
+    En tant que chef du zoo,
+    Je veux pouvoir créer des recettes, ajouter des ingrédients, calculer leur apport calorique total
+    Et vérifier la présence ou l'absence d'un ingrédient
+    Afin de gérer correctement l'alimentation de mes animaux.
 
     Scenario: Création d'une recette simple
         Given une nouvelle recette "Tacos"

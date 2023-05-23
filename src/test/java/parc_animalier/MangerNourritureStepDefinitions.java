@@ -51,30 +51,20 @@ public class MangerNourritureStepDefinitions {
         }
     }
 
-    @When("l'animal mange une recette contenant de la viande")
-    public void donnerRecetteAvecViande() {
+    @When("l'animal mange une recette {string}")
+    public void donnerRecette(String typeRecette) {
         recette = new Recette();
         ingredientFactory = new IngredientFactory();
-        recette.ajouterIngredient(ingredientFactory.createIngredient("viande"));
-        poidsInitial = animal.getPoids();
-        animal.mangerNourriture(recette);
-    }
 
-    @When("l'animal mange une recette sans viande")
-    public void donnerRecetteSansViande() {
-        recette = new Recette();
-        ingredientFactory = new IngredientFactory();
-        recette.ajouterIngredient(ingredientFactory.createIngredient("légumes"));
-        poidsInitial = animal.getPoids();
-        animal.mangerNourriture(recette);
-    }
+        if (typeRecette.equals("contenant de la viande")) {
+            recette.ajouterIngredient(ingredientFactory.createIngredient("viande"));
+        } else if (typeRecette.equals("sans viande")) {
+            recette.ajouterIngredient(ingredientFactory.createIngredient("légumes"));
+        } else {
+            recette.ajouterIngredient(ingredientFactory.createIngredient("viande"));
+            recette.ajouterIngredient(ingredientFactory.createIngredient("légumes"));
+        }
 
-    @When("l'animal mange une recette")
-    public void donnerRecette() {
-        recette = new Recette();
-        ingredientFactory = new IngredientFactory();
-        recette.ajouterIngredient(ingredientFactory.createIngredient("viande"));
-        recette.ajouterIngredient(ingredientFactory.createIngredient("viande"));
         poidsInitial = animal.getPoids();
         animal.mangerNourriture(recette);
     }
