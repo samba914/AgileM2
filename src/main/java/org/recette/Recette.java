@@ -1,6 +1,7 @@
 package org.recette;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,18 +18,24 @@ public class Recette {
 
     public Recette() {
         // initialisation des variables d'instance
-        this.nom = "";
-        this.tempsCuisson = 0;
-        this.listeIngredients = new ArrayList<>();
+        this("",0,null) ;
     }
 
     public Recette(String nom, int tempsCuisson) {
         // initialisation des variables d'instance
-        this.nom = nom;
-        this.tempsCuisson = tempsCuisson;
-        this.listeIngredients = new ArrayList<>();
+        this(nom,tempsCuisson,null) ;
 
     }
+     public Recette(String nom, int tempsCuisson, Ingredient ... ingredients){
+         this.nom = nom;
+         this.tempsCuisson = tempsCuisson;
+         if(ingredients == null){
+             this.listeIngredients = new ArrayList<>();
+         }
+         else {
+             this.listeIngredients = new ArrayList<>(Arrays.asList(ingredients));
+         }
+     }
 
     /**
      * Cette methode ajoute une durée au temps de cuisson.
@@ -37,7 +44,6 @@ public class Recette {
      * @return le nouveau temps de cuisson.
      */
     public int updateCuisson(int y) {
-        // Insérez votre code ici
         return tempsCuisson + y;
     }
 

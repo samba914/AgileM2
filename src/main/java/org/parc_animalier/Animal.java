@@ -17,8 +17,15 @@ public class Animal
 
     public Animal()
     {
-        this.poids = 0;
-        this.race = "";
+        this(0.0,"") ;
+    }
+    public Animal(double poids, String  race){
+        this(poids, race, null);
+    }
+    public Animal(double poids, String  race, StrategieManger strategieManger){
+        this.poids = poids ;
+        this.race = race ;
+        this.strategieManger = strategieManger;
     }
 
     public double getPoids(){
